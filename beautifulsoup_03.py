@@ -5,8 +5,12 @@ URL = 'http://sps.cuny.edu/whoweare/departments/it'
 DATA = urllib2.urlopen(URL).read()
 SOUP = BeautifulSoup(DATA)
 
-# Put your function here
-
+def sps_it_department:
+    """Makes business cards out of SPS IT website"""
+    links = SOUP.findAll('<span', ('class':'name bold'))
+    for link in links:
+        print link
+        
 if __name__ == '__main__':
     # You can use this conditional block for debugging
     # print SOUP
